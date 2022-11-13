@@ -105,8 +105,7 @@
     </sprites>
   </sprites>
   <backgrounds name="background">
-    <background>background\tl_grassland</background>
-    <background>background\background4</background>
+    <background>background\tl_shoreline</background>
     <background>background\tl_water</background>
     <background>background\tl_hills</background>
     <background>background\tl_ship</background>
@@ -159,6 +158,8 @@
         <object>objects\water</object>
         <object>objects\o_sun</object>
         <object>objects\o_cloud</object>
+        <object>objects\o_ground</object>
+        <object>objects\o_fog</object>
       </objects>
       <objects name="Title Screen">
         <object>objects\o_ship_aesthetic</object>

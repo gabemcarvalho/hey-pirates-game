@@ -73,22 +73,22 @@ if fast_trans = true {
         fast_alpha = approach(fast_alpha,0.1,fast_alpha_target);
     } else {
         if fast_alpha_target == 1 {
-        view_visible[1] = false;
-        view_visible[0] = true;
-        view_xview[0] = 0;
-        view_yview[0] = 0;
-        view_wview[0] = room_width;
-        view_hview[0] = room_height;
-        instance_create(room_width/2,32,o_title);
-        o_title.size = 1.2;
-        instance_create(room_width/2,64,o_play_button);
-        o_ship_aesthetic.hspeed = 0;
-        o_ship_aesthetic.x = 192;
-        o_stickman.sprite_index = s_potato_man;
-        if instance_exists(o_pgun) {
-            with o_pgun {instance_destroy()}
-        }
-    instance_create(0,0,o_options);
+            view_visible[1] = false;
+            view_visible[0] = true;
+            view_xview[0] = 0;
+            view_yview[0] = 0;
+            view_wview[0] = room_width;
+            view_hview[0] = room_height;
+            instance_create(room_width/2,32,o_title);
+            o_title.size = 1.2;
+            instance_create(room_width/2,64,o_play_button);
+            o_ship_aesthetic.hspeed = 0;
+            o_ship_aesthetic.x = 192;
+            o_stickman.sprite_index = s_potato_man;
+            if instance_exists(o_pgun) {
+                with o_pgun {instance_destroy()}
+            }
+            //instance_create(0,0,o_options);
             fast_alpha_target = 0;
         } else {
             instance_destroy();
@@ -138,7 +138,7 @@ if step == 200 {
     // Create title, button, and high score instances
     instance_create(room_width/2,32,o_title);
     instance_create(room_width/2,64,o_play_button);
-    instance_create(0,0,o_options);
+    //instance_create(0,0,o_options);
     // Destroy the transition object
     instance_destroy();
 }

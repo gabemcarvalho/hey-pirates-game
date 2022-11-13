@@ -1,7 +1,7 @@
 ///game_pause()
 with o_controller {
     // Create a sprite from the application surface
-    pause_sprite = sprite_create_from_surface(application_surface,0,0,720,480,false,false,0,0);
+    pause_sprite = sprite_create_from_surface(application_surface,0,0,1080,432,false,false,0,0);
     
     // Deactivate all instances
     instance_deactivate_all(true);

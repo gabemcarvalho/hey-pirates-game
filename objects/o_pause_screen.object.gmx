@@ -103,7 +103,7 @@ alarm[0] = countdown_timer_default;
             <kind>1</kind>
             <string>/// Control the pause screen
 if !clicked {
-    if mouse_in((room_width/2)-15,(room_height*0.65)-5,(room_width/2)+15,(room_height*0.65)+5) {
+    if mouse_in((room_width/2)-20,(room_height*0.65)-5,(room_width/2)+20,(room_height*0.65)+5) {
         if mouse_check_button_pressed(mb_left) {
             // Play
             alarm[0] = countdown_timer_default;
@@ -113,7 +113,7 @@ if !clicked {
         col_play = make_colour_rgb(200,200,200);
     } else col_play = c_white;
     
-    if mouse_in((room_width*0.3)-15,(room_height*0.65)-5,(room_width*0.3)+15,(room_height*0.65)+5) {
+    if mouse_in((room_width*0.25)-15,(room_height*0.65)-5,(room_width*0.25)+15,(room_height*0.65)+5) {
         if mouse_check_button_pressed(mb_left) {
             // Menu
             option = 0;
@@ -124,7 +124,7 @@ if !clicked {
         col_menu = make_colour_rgb(200,200,200);
     } else col_menu = c_white;
     
-    if mouse_in((room_width*0.7)-15,(room_height*0.65)-5,(room_width*0.7)+15,(room_height*0.65)+5) {
+    if mouse_in((room_width*0.75)-15,(room_height*0.65)-5,(room_width*0.75)+15,(room_height*0.65)+5) {
         if mouse_check_button_pressed(mb_left) {
             // Quit
             game_end();
@@ -168,13 +168,13 @@ if option == 0 {
     draw_text_transformed(room_width/2,room_height*0.35,"PAUSED",2,2,0);
     
     draw_set_colour(col_play);
-    draw_text(room_width*0.5,room_height*0.65,"play");
+    draw_text(room_width*0.5,room_height*0.65,"continue");
     
     draw_set_colour(col_menu);
-    draw_text(room_width*0.3,room_height*0.65,"menu");
+    draw_text(room_width*0.25,room_height*0.65,"menu");
     
     draw_set_colour(col_quit);
-    draw_text(room_width*0.7,room_height*0.65,"quit");
+    draw_text(room_width*0.75,room_height*0.65,"quit");
 } else {
     draw_set_alpha(1);
     draw_text_transformed(room_width/2,room_height/2,countdown_text,2,2,0);
