@@ -61,7 +61,7 @@ global.level_xp[8] = 25000;
 global.level_xp[9] = 40000;
 global.level_xp[10] = 100000;
 
-// Puase sprite
+// Pause sprite
 pause_sprite = 0;
 
 // Weapon variables
