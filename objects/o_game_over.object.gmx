@@ -33,7 +33,7 @@ done = false;
 step = 0;
 ty = room_height/2;
 button_alpha = 0;
-button_spd = 1/(2*room_speed);
+button_spd = 1/(1.2*room_speed);
 end_transition = false;
 end_alpha = 0;
 </string>
