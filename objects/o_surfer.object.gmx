@@ -71,7 +71,8 @@ if hp == 0 {
     
     // Add to score
     score += 100;
-    create_text(x+9,y-12,"100",c_black,room_speed*0.8,0.05,0.1,0.58,0);
+    global.bounty += 100;
+    create_text(x+9,y-12,"+100",c_black,room_speed*0.8,0.05,0.1,0.58,0);
     
     // Give 2-5 xp
     var n = round(random(3))+2;

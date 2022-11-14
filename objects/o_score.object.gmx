@@ -137,7 +137,9 @@ score_string = score_string+string(score);
 
 // Draw the score
 //draw_text(x,y,"SCORE: "+score_string);
-if descending || done draw_text(x+o_controller.vx*HUD_OFFSET_MULTIPLIER,y+o_controller.vy*HUD_OFFSET_MULTIPLIER,"Dawn of the Onslaught"); // NOT CURRENTLY DRAWING THE SCORE
+if descending || done {
+    draw_text(x+o_controller.vx*HUD_OFFSET_MULTIPLIER,y+o_controller.vy*HUD_OFFSET_MULTIPLIER,"Dawn of the Onslaught"); // NOT CURRENTLY DRAWING THE SCORE
+}
 
 // Reset variables
 draw_set_colour(c_white);

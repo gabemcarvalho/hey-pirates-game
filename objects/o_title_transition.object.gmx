@@ -63,7 +63,7 @@ fast_trans = false;
             <string>/// Control transition
 
 if !fast_trans &amp;&amp; step &lt; 390 {
-    if keyboard_check_pressed(vk_space) {
+    if mouse_check_button_pressed(mb_left) {
         fast_trans = true;
     }
 }

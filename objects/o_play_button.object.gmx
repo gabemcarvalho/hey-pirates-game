@@ -29,6 +29,7 @@
 y = 64;
 dx = 0;
 dy = 0;
+hover = false;
 pressed = false;
 </string>
           </argument>
@@ -54,14 +55,15 @@ pressed = false;
             <kind>1</kind>
             <string>/// Check for click
 if !pressed {
-    if mouse_check_button_pressed(mb_left) {
-        if mouse_x &gt; x+dx-8 &amp;&amp; mouse_x &lt; x+dx+8 {
-            if mouse_y &gt; y+dy-4 &amp;&amp; mouse_y &lt; y+dy+4 {
-                //room_goto(r_game);
-                instance_create(0,0,o_play_transition);
-                pressed = true;
-            }
+    if mouse_x &gt; x+dx-8 &amp;&amp; mouse_x &lt; x+dx+8 &amp;&amp; mouse_y &gt; y+dy-4 &amp;&amp; mouse_y &lt; y+dy+4  {
+        hover = true;
+        
+        if mouse_check_button_pressed(mb_left) {
+            instance_create(0,0,o_play_transition);
+            pressed = true;
         }
+    } else {
+        hover = false;
     }
 }
 </string>
@@ -88,7 +90,11 @@ if !pressed {
             <kind>1</kind>
             <string>// Draw the play button
 draw_set_font(f_thin);
-draw_set_colour(c_black);
+if hover &amp;&amp; !pressed {
+    draw_set_colour(make_colour_hsv(22, 150, 150));
+} else {
+    draw_set_colour(c_black);
+}
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_alpha(1);
