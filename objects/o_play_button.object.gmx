@@ -55,7 +55,7 @@ pressed = false;
             <kind>1</kind>
             <string>/// Check for click
 if !pressed {
-    if mouse_x &gt; x+dx-8 &amp;&amp; mouse_x &lt; x+dx+8 &amp;&amp; mouse_y &gt; y+dy-4 &amp;&amp; mouse_y &lt; y+dy+4  {
+    if mouse_x &gt; x+dx-12 &amp;&amp; mouse_x &lt; x+dx+12 &amp;&amp; mouse_y &gt; y+dy-4 &amp;&amp; mouse_y &lt; y+dy+4  {
         hover = true;
         
         if mouse_check_button_pressed(mb_left) {

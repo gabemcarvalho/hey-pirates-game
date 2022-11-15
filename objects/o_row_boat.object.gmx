@@ -28,8 +28,8 @@
             <string>/// Initialize the row boat
 // Set up variables
 hp_max = 60;
-hp = 60;
-hspeed = -0.12;
+hp = hp_max;
+hspeed = -0.18;
 y = water.level+83;
 angle = water.cycle*3;
 
@@ -40,7 +40,7 @@ pirate1.ry = -5.5;
 with (pirate1) {
     rdis = sign(-rx)*sqrt(rx*rx+ry*ry);
     theta = arctan(ry/rx)*180/pi;
-    hspeed = -0.12;
+    hspeed = other.hspeed;
     bottom = 1;
 }
 pirate1.depth = depth-0.1;
@@ -52,7 +52,7 @@ pirate2.ry = -5.5;
 with (pirate2) {
     rdis = sign(-rx)*sqrt(rx*rx+ry*ry);
     theta = arctan(ry/rx)*180/pi;
-    hspeed = -0.12;
+    hspeed = other.hspeed;
 }
 pirate2.depth = depth-0.1;
 </string>
@@ -90,7 +90,7 @@ if hp == 0 {
     instance_destroy();
     ship2 = instance_create(x,y,o_row_boat_sinking);
     ship2.angle = angle;
-    add_screenshake(3,10);
+    add_screenshake(1.5,10);
     
     // Add to score
     score += 250;
@@ -160,7 +160,7 @@ if x &lt; 0 {
 hp = max(hp-other.damage,0);
 part_particles_create(particles.psys,other.x,other.y,particles.ship_pix,random_range(4,8));
 with other {instance_destroy()}
-add_screenshake(choose(1,1.5,2),10);
+add_screenshake(choose(0.5,0.75,1.0),10);
 </string>
           </argument>
         </arguments>

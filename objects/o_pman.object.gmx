@@ -37,7 +37,7 @@ recoil_speed = 0;
 rx = 0;
 ry = 0;
 
-potato_spd = 2.0;  // Default 2.0, max 3.0
+potato_spd = 3.0;  // Default 2.0, max 3.0
 recoil_amt = 1.2 // Default 1.2, Max 0.5
 
 auto_fire_time = room_speed/3; // Time between auto fires. Defaut room_speed/3
@@ -48,7 +48,7 @@ clicked = false; // Used for max click speed
 
 weapon = 0 // 0 = normal, 1 = bow
 
-parrow_spd = 7.0 // Parrow speed
+parrow_spd = 10.0 // Parrow speed
 
 bow_countdown_max = 15; // Default 15
 bow_countdown = bow_countdown_max;

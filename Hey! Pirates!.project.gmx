@@ -134,6 +134,7 @@
         <object>objects\o_pause_screen</object>
         <object>objects\o_shop_button</object>
         <object>objects\o_shop</object>
+        <object>objects\o_lineofsight</object>
       </objects>
     </objects>
     <objects name="Aesthetics">

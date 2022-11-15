@@ -67,6 +67,7 @@ pause_sprite = 0;
 // Weapon variables
 // Potato Gun
 global.potato_damage = 4; // Default 4.0
+global.grav = 0.05;
 
 // Potato Bow
 global.parrow_damage = 2; // Default 2.0

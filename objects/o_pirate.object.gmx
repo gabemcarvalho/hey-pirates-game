@@ -37,7 +37,7 @@ yr = 0;
 angle = 0;
 
 // Set the speed
-hspeed = -0.1;
+hspeed = -0.15;
 </string>
           </argument>
         </arguments>

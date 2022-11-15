@@ -27,9 +27,9 @@
             <kind>1</kind>
             <string>/// Initialize the ship
 // Set up variables
-hp_max = 100;
-hp = 100;
-hspeed = -0.1;
+hp_max = 140;
+hp = hp_max;
+hspeed = -0.15;
 y = water.level+83;
 angle = water.cycle*3;
 
@@ -99,7 +99,7 @@ if hp == 0 {
     instance_destroy();
     ship2 = instance_create(x,y,o_ship_sinking);
     ship2.angle = angle;
-    add_screenshake(3,10);
+    add_screenshake(1.5,10);
     
     // Add to score
     score += 350;
@@ -192,7 +192,7 @@ if x &lt; 0 {
 hp = max(hp-other.damage,0);
 part_particles_create(particles.psys,other.x,other.y,particles.ship_pix,random_range(4,8));
 with other {instance_destroy()}
-add_screenshake(choose(1,1.5,2),10);
+add_screenshake(choose(0.5,0.75,1.0),10);
 </string>
           </argument>
         </arguments>
