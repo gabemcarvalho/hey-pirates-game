@@ -22,7 +22,5 @@
   <frames>
     <frame index="0">images\s_sun_0.png</frame>
     <frame index="1">images\s_sun_1.png</frame>
-    <frame index="2">images\s_sun_2.png</frame>
-    <frame index="3">images\s_sun_3.png</frame>
   </frames>
 </sprite>

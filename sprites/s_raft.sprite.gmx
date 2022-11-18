@@ -21,6 +21,5 @@
   <height>56</height>
   <frames>
     <frame index="0">images\s_raft_0.png</frame>
-    <frame index="1">images\s_raft_1.png</frame>
   </frames>
 </sprite>

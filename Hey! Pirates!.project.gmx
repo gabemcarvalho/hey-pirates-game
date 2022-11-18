@@ -43,7 +43,6 @@
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\s_ship</sprite>
-      <sprite>sprites\s_ship_and_pirates</sprite>
       <sprite>sprites\s_barrel</sprite>
       <sprite>sprites\s_barrel_pirate</sprite>
       <sprite>sprites\s_row_boat</sprite>
@@ -85,13 +84,14 @@
       <sprite>sprites\THESPAWNRATEISWAYTOOHIGH</sprite>
       <sprite>sprites\shop_concept</sprite>
       <sprite>sprites\s_xp_gui_variations</sprite>
+      <sprite>sprites\s_ship_and_pirates</sprite>
+      <sprite>sprites\s_raft_and_pirates</sprite>
     </sprites>
   </sprites>
   <backgrounds name="background">
     <background>background\tl_shoreline</background>
     <background>background\tl_water</background>
     <background>background\tl_hills</background>
-    <background>background\tl_ship</background>
   </backgrounds>
   <paths name="paths"/>
   <scripts name="scripts">
