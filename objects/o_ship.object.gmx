@@ -29,7 +29,7 @@
 // Set up variables
 hp_max = 140;
 hp = hp_max;
-hspeed = -0.15;
+hspeed = -0.15 * global.speed_mulitplier;
 y = water.level+83;
 angle = water.cycle*3;
 
@@ -42,6 +42,7 @@ pirate1.depth = depth-0.1;
 with (pirate1) {
     rdis = sign(-rx)*sqrt(rx*rx+ry*ry);
     theta = arctan(ry/rx)*180/pi;
+    hspeed = other.hspeed;
 }
 
 p2_x = round(random(10));
@@ -52,6 +53,7 @@ pirate2.depth = depth-0.1;
 with (pirate2) {
     rdis = sign(-rx)*sqrt(rx*rx+ry*ry);
     theta = arctan(ry/rx)*180/pi;
+    hspeed = other.hspeed;
 }
 
 p3_x = round(random(10));
@@ -62,6 +64,7 @@ pirate3.depth = depth-0.1;
 with (pirate3) {
     rdis = sign(-rx)*sqrt(rx*rx+ry*ry);
     theta = arctan(ry/rx)*180/pi;
+    hspeed = other.hspeed;
 }
 </string>
           </argument>

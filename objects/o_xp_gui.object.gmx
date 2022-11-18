@@ -35,6 +35,7 @@ for (i = 1; i &lt; global.level; i++) {
     xp_offset += global.level_xp[i]
 }
 xp_needed = global.level_xp[global.level];
+
 </string>
           </argument>
         </arguments>
@@ -67,7 +68,7 @@ xp_needed = global.level_xp[global.level];
 if xp_total-xp_offset &gt; xp_needed {
     global.level++;
     xp_offset += xp_needed;
-    xp_needed = global.level_xp[global.level];;
+    xp_needed = global.level_xp[min(global.level, 10)];
     
 }
 </string>
@@ -103,7 +104,8 @@ draw_sprite_ext(s_xp_bar_fill,0,x+24-21*bar_size+ox,y+4+oy,50*fill_percent*bar_s
 
 // Get the number of digits of the bounty
 var oom = 1 // Orders of magnitude
-var divscore = global.bounty;
+var display_bounty = min(global.bounty, 999999);
+var divscore = display_bounty;
 while (divscore/10 &gt;= 1) {
     divscore = divscore/10;
     oom++
@@ -116,7 +118,7 @@ var score_string = "";
 for (i = 0; i &lt; zeros; i++) {
     score_string = score_string+"0";
 }
-score_string = score_string+string(global.bounty);
+score_string = score_string+string(display_bounty);
 
 // Draw the bounty
 draw_set_font(global.f_micro);

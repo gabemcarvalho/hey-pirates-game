@@ -29,7 +29,7 @@
 // Set up variables
 hp_max = 60;
 hp = hp_max;
-hspeed = -0.18;
+hspeed = -0.18 * global.speed_mulitplier;
 y = water.level+83;
 angle = water.cycle*3;
 

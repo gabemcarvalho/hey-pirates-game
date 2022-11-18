@@ -30,7 +30,7 @@ vspd = 0;
 hspd = 1;
 grav = global.grav;
 
-damage = global.potato_damage;
+damage = global.potato_damage + global.level;
 </string>
           </argument>
         </arguments>

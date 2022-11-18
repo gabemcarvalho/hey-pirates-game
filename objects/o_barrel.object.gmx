@@ -31,7 +31,7 @@ hp = hp_max;
 y = water.level+83
 angle = 0;
 
-hspeed = -0.075;
+hspeed = -0.075 * global.speed_mulitplier;
 
 top = choose(0,1,2,3);
 </string>

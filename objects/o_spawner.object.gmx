@@ -29,6 +29,7 @@
 instance_create(0,0,o_score);
 first_enemy = instance_create(276,80,o_ship);
 timer_set = false;
+num_spawned_total = 0;
 </string>
           </argument>
         </arguments>
@@ -57,29 +58,32 @@ var enemy = choose(1,2,3,4,5);
 switch enemy {
     case 1:  // Ship
     instance_create(276,80,o_ship);
-    alarm[0] = (8+random(2))*room_speed;
+    alarm[0] = max(1, (7+random(2))*room_speed - 2 * num_spawned_total);
     break;
     
     case 2:  // Barrel
     instance_create(256,80,o_barrel);
-    alarm[0] = (4+random(2))*room_speed;
+    alarm[0] = max(1, (2+random(2))*room_speed - 2 * num_spawned_total);
     break;
     
     case 3:  // Row Boat
     instance_create(276,80,o_row_boat);
-    alarm[0] = (5+random(3))*room_speed;
+    alarm[0] = max(1, (5+random(3))*room_speed - 2 * num_spawned_total);
     break;
     
     case 4:  // Surfer
     instance_create(256,80,o_surfer);
-    alarm[0] = (3+random(2))*room_speed;
+    alarm[0] = max(1, (1+random(2))*room_speed - 2 * num_spawned_total);
     break;
     
     case 5:  // Raft
     instance_create(276,80,o_raft);
-    alarm[0] = (7+random(3))*room_speed;
+    alarm[0] = max(1, (6+random(3))*room_speed - 2 * num_spawned_total);
     break;
 }
+
+num_spawned_total += 1;
+global.speed_mulitplier += 0.01;
 </string>
           </argument>
         </arguments>
