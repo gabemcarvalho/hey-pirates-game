@@ -40,6 +40,7 @@
       <sprite>sprites\s_xp_point</sprite>
       <sprite>sprites\s_xp_point_big</sprite>
       <sprite>sprites\s_pixel_dark_grey</sprite>
+      <sprite>sprites\s_pixel_healthbar</sprite>
     </sprites>
     <sprites name="Enemies">
       <sprite>sprites\s_ship</sprite>

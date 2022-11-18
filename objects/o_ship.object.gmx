@@ -221,11 +221,8 @@ add_screenshake(choose(0.5,0.75,1.0),10);
             <string>/// Draw the ship
 draw_sprite_ext(s_ship,0,x,y,1,1,angle,c_white,1);
 
-draw_set_colour(c_red);
-draw_rectangle(x-12,y-52,x+12,y-50,false);
-draw_set_colour(make_colour_rgb(0,255,0));
-draw_rectangle(x-12,y-52,x-12+24*hp/hp_max,y-50,false);
-draw_set_colour(c_white);
+draw_sprite_stretched(s_pixel_healthbar, 0, x-12, y-52, 24, 3);
+draw_sprite_stretched(s_pixel_healthbar, 1, x-12, y-52, 24*hp/hp_max, 3);
 </string>
           </argument>
         </arguments>

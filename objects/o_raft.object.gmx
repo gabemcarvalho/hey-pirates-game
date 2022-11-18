@@ -207,12 +207,8 @@ draw_sprite_ext(s_pirate_stand,0,x+p2_rx,y+p2_ry+rdis2*sin((angle)*pi/180),1,1,a
 draw_sprite_ext(s_barrel_pirate,3,x+p1_rx-0.8,y+p1_ry+rdis1*sin((angle)*pi/180),1,1,2*angle,c_white,1);
 draw_sprite_ext(s_barrel_pirate,3,x+p2_rx-0.8,y+p2_ry+rdis2*sin((angle)*pi/180),1,1,2*angle,c_white,1);
 
-
-draw_set_colour(c_red);
-draw_rectangle(x-11,y-48,x+11,y-46,false);
-draw_set_colour(make_colour_rgb(0,255,0));
-draw_rectangle(x-11,y-48,x-11+22*hp/hp_max,y-46,false);
-draw_set_colour(c_white);
+draw_sprite_stretched(s_pixel_healthbar, 0, x-11, y-48, 22, 3);
+draw_sprite_stretched(s_pixel_healthbar, 1, x-11, y-48, 22*hp/hp_max, 3);
 </string>
           </argument>
         </arguments>

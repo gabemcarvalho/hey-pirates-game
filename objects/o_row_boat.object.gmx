@@ -187,11 +187,8 @@ add_screenshake(choose(0.5,0.75,1.0),10);
 draw_sprite_ext(s_row_boat,0,x,y,1,1,angle,c_white,1);
 draw_sprite_ext(s_row_boat_paddle,0,x,y-6,1,1,-5*angle,c_white,1);
 
-draw_set_colour(c_red);
-draw_rectangle(x-10,y-22,x+10,y-20,false);
-draw_set_colour(make_colour_rgb(0,255,0));
-draw_rectangle(x-10,y-22,x-10+20*hp/hp_max,y-20,false);
-draw_set_colour(c_white);
+draw_sprite_stretched(s_pixel_healthbar, 0, x-10, y-22, 20, 3);
+draw_sprite_stretched(s_pixel_healthbar, 1, x-10, y-22, 20*hp/hp_max, 3);
 </string>
           </argument>
         </arguments>

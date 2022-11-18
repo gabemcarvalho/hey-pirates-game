@@ -53,7 +53,6 @@ var y0 = pman.gpy;
 var vi_x = pman.potato_spd * cos(pman.fire_angle*pi/180);
 var vi_y = pman.potato_spd * sin(pman.fire_angle*pi/180);
 
-draw_set_colour(c_black);
 if pman.weapon == 0 { // potato gun
     var vi_x = pman.potato_spd * cos(pman.fire_angle*pi/180);
     var vi_y = pman.potato_spd * sin(pman.fire_angle*pi/180);
@@ -61,7 +60,7 @@ if pman.weapon == 0 { // potato gun
     for (var t = 0.1 * t_horizon; t &lt; t_horizon; t += 0.1 * t_horizon) {
         var px = vi_x * t + x0;
         var py = -vi_y * t + y0 + 0.5 * global.grav * t * t;
-        draw_rectangle(px, py, px, py, false);
+        draw_sprite(s_pixel_dark_grey, 0, px, py);
     }
 } else { // arrows
      var vi_x = pman.parrow_spd * cos(pman.fire_angle*pi/180);
@@ -70,12 +69,10 @@ if pman.weapon == 0 { // potato gun
      for (var t = t_end / 15; t &lt; t_end; t += t_end/15) {
         var px = vi_x * t + x0;
         var py = -vi_y * t + y0;
-        draw_rectangle(px, py, px, py, false);
+        draw_sprite(s_pixel_dark_grey, 0, px, py);
     }
 }
 
-
-draw_set_colour(c_white);
 </string>
           </argument>
         </arguments>

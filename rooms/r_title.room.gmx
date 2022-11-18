@@ -10,8 +10,11 @@
   <persistent>0</persistent>
   <colour>16777088</colour>
   <showcolour>-1</showcolour>
-  <code>score = 0
-global.bounty = 0;</code>
+  <code>score = 0;
+global.xp = 0;
+global.level = 1;
+global.bounty = 0;
+global.num_coins_active = 0;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -32,7 +35,7 @@ global.bounty = 0;</code>
     <yoffset>-131</yoffset>
   </makerSettings>
   <backgrounds>
-    <background visible="-1" foreground="-1" name="tl_water" x="0" y="81" htiled="-1" vtiled="0" hspeed="0" vspeed="0" stretch="0"/>
+    <background visible="0" foreground="0" name="tl_water" x="0" y="81" htiled="-1" vtiled="0" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>
     <background visible="0" foreground="0" name="" x="0" y="0" htiled="-1" vtiled="-1" hspeed="0" vspeed="0" stretch="0"/>

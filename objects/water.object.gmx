@@ -3,7 +3,7 @@
   <spriteName>&lt;undefined&gt;</spriteName>
   <solid>0</solid>
   <visible>-1</visible>
-  <depth>0</depth>
+  <depth>-50</depth>
   <persistent>0</persistent>
   <parentName>&lt;undefined&gt;</parentName>
   <maskName>&lt;undefined&gt;</maskName>
@@ -28,6 +28,7 @@
             <string>step = 0;
 level = 0;
 cycle = sin((step*pi)/72);
+bk_x = 0;
 </string>
           </argument>
         </arguments>
@@ -52,12 +53,40 @@ cycle = sin((step*pi)/72);
             <kind>1</kind>
             <string>step++;
 if step = 144 {step = 0};
-background_hspeed[0] = 0.2
 
+// hspeed
+bk_x += 0.2;
+if (bk_x &gt;= 16.0) bk_x -= 16.0;
+
+// vspeed
 cycle = sin((step*pi)/72);
-background_vspeed[0] = 0.05*cycle;
-
-level += background_vspeed[0];
+level += 0.05*cycle;
+</string>
+          </argument>
+        </arguments>
+      </action>
+    </event>
+    <event eventtype="8" enumb="0">
+      <action>
+        <libid>1</libid>
+        <id>603</id>
+        <kind>7</kind>
+        <userelative>0</userelative>
+        <isquestion>0</isquestion>
+        <useapplyto>-1</useapplyto>
+        <exetype>2</exetype>
+        <functionname></functionname>
+        <codestring></codestring>
+        <whoName>self</whoName>
+        <relative>0</relative>
+        <isnot>0</isnot>
+        <arguments>
+          <argument>
+            <kind>1</kind>
+            <string>// tile background horizontally
+for (var wx = bk_x - 16; wx &lt;= room_width + 16; wx += 16) {
+    draw_background(tl_water, wx, level + 81.0);
+}
 </string>
           </argument>
         </arguments>

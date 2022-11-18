@@ -58,6 +58,7 @@ top = choose(0,1,2,3);
             <kind>1</kind>
             <string>/// Control the barrel
 // Float on water
+y = water.level+83;
 vspeed = 1.5*background_vspeed[0];
 angle = water.cycle*5;
 
@@ -148,11 +149,8 @@ draw_sprite_ext(s_surfboard,1,x,y,1,1,angle,c_white,1);
 draw_sprite_ext(s_pirate_top,top,x,y-7,1,1,angle,c_white,1);
 draw_sprite_ext(s_barrel_pirate,3,x-0.8,y-7,1,1,2*angle,c_white,1);
 
-draw_set_colour(c_red);
-draw_rectangle(x-6,y-21,x+6,y-20,false);
-draw_set_colour(make_colour_rgb(0,255,0));
-draw_rectangle(x-6,y-21,x-6+12*hp/hp_max,y-20,false);
-draw_set_colour(c_white);
+draw_sprite_stretched(s_pixel_healthbar, 0, x-6, y-21, 12, 2);
+draw_sprite_stretched(s_pixel_healthbar, 1, x-6, y-21, 12*hp/hp_max, 2);
 </string>
           </argument>
         </arguments>
