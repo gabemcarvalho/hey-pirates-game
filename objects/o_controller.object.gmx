@@ -76,6 +76,11 @@ global.parrow_damage = 2; // Default 2.0
 
 // Enemies
 global.speed_mulitplier = 1.0;
+
+// Sounds
+global.waves = audio_play_sound(sfx_waves, 1, true);
+global.waves_gain = 0.2;
+audio_sound_gain(global.waves, 0, 0);
 </string>
           </argument>
         </arguments>

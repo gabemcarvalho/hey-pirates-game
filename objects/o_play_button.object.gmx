@@ -56,9 +56,12 @@ pressed = false;
             <string>/// Check for click
 if !pressed {
     if mouse_x &gt; x+dx-12 &amp;&amp; mouse_x &lt; x+dx+12 &amp;&amp; mouse_y &gt; y+dy-4 &amp;&amp; mouse_y &lt; y+dy+4  {
+        if !hover audio_play_sound(sfx_menu1, 1, false);
+        
         hover = true;
         
         if mouse_check_button_pressed(mb_left) {
+            audio_play_sound(sfx_menu3, 1, false);
             instance_create(0,0,o_play_transition);
             pressed = true;
         }

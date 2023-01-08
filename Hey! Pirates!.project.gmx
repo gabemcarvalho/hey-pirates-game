@@ -5,7 +5,34 @@
   </Configs>
   <datafiles number="1" name="datafiles"/>
   <NewExtensions/>
-  <sounds name="sound"/>
+  <sounds name="sound">
+    <sound>sound\sfx_waves</sound>
+    <sound>sound\sfx_arrow1</sound>
+    <sound>sound\sfx_arrow2</sound>
+    <sound>sound\sfx_arrow3</sound>
+    <sound>sound\sfx_bubbles</sound>
+    <sound>sound\sfx_coin1</sound>
+    <sound>sound\sfx_coin2</sound>
+    <sound>sound\sfx_coin3</sound>
+    <sound>sound\sfx_explode1</sound>
+    <sound>sound\sfx_explode2</sound>
+    <sound>sound\sfx_explode3</sound>
+    <sound>sound\sfx_hit1</sound>
+    <sound>sound\sfx_hit2</sound>
+    <sound>sound\sfx_hit3</sound>
+    <sound>sound\sfx_menu1</sound>
+    <sound>sound\sfx_menu2</sound>
+    <sound>sound\sfx_menu3</sound>
+    <sound>sound\sfx_menu4</sound>
+    <sound>sound\sfx_pop1</sound>
+    <sound>sound\sfx_pop2</sound>
+    <sound>sound\sfx_pop3</sound>
+    <sound>sound\sfx_splash</sound>
+    <sound>sound\sfx_xp</sound>
+    <sound>sound\sfx_rumbling</sound>
+    <sound>sound\sfx_title_hit</sound>
+    <sound>sound\sfx_title_in</sound>
+  </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
       <sprite>sprites\s_potato_man</sprite>

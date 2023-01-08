@@ -45,6 +45,9 @@ for (i = 1; i &lt; 13; i+=2) {
     }
 }
 
+audio_play_sound(choose(sfx_explode1, sfx_explode2, sfx_explode3), 1, false);
+audio_play_sound(sfx_bubbles, 1, false);
+
 // Death message
 //create_text(x,y-10,"Argg!",c_black,room_speed*0.8,0.02,0.05,1,0);
 </string>

@@ -1,5 +1,7 @@
 ///game_pause()
 with o_controller {
+    audio_play_sound(sfx_menu4, 1, false);
+
     // Create a sprite from the application surface
     pause_sprite = sprite_create_from_surface(application_surface,0,0,1080,432,false,false,0,0);
     

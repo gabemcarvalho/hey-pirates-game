@@ -95,6 +95,7 @@ if zoom {
     if abs(x-25) &lt; 2 {
         if abs(y-4) &lt; 2 {
             global.xp++;
+            audio_play_sound(sfx_xp, 1, false);
             instance_destroy();
         }
     }

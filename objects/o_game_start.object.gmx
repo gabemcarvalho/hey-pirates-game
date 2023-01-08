@@ -122,6 +122,7 @@ if timer == 0 {
     show = !show;
     if show {
         timer = 0.4*room_speed;
+        audio_play_sound(sfx_menu2, 1, false);
     } else {
         timer = 0.3*room_speed;
     }

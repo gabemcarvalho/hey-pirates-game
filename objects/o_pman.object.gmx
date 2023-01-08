@@ -216,6 +216,7 @@ if mouse_check_button_pressed(mb_left) || auto_fire == 0 || clicked {
             recoil_speed = recoil_amt;
             clicked = false;
             part_particles_create(particles.psys,gpx,gpy,particles.poof,random_range(2,4));
+            audio_play_sound(choose(sfx_pop1, sfx_pop2, sfx_pop3), 1, false);
         } else if weapon == 1 &amp;&amp; bow_countdown == 0 {
             // Fire potato arrow
             pot = instance_create(gpx,gpy,o_parrow);
@@ -224,6 +225,7 @@ if mouse_check_button_pressed(mb_left) || auto_fire == 0 || clicked {
             recoil_speed = recoil_amt+0.2;
             bow_countdown = bow_countdown_max
             clicked = false;
+            audio_play_sound(choose(sfx_arrow1, sfx_arrow2, sfx_arrow3), 1, false);
         }
     }
 }

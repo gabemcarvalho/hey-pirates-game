@@ -38,6 +38,8 @@ title_size = 0;
 fast_alpha = 0;
 fast_alpha_target = 1;
 fast_trans = false;
+
+audio_sound_gain(global.waves, global.waves_gain, 500);
 </string>
           </argument>
         </arguments>
@@ -88,6 +90,7 @@ if fast_trans = true {
             if instance_exists(o_pgun) {
                 with o_pgun {instance_destroy()}
             }
+            audio_sound_gain(global.waves, global.waves_gain, 200);
             //instance_create(0,0,o_options);
             fast_alpha_target = 0;
         } else {
@@ -112,12 +115,14 @@ if step &lt; 230 {
 if step == 200 {
     target_alpha = 1;
     spd = 2/room_speed;
+    audio_sound_gain(global.waves, 0.05, 500);
 } else if step == 230 {
     target_alpha = 0;
     o_ship_aesthetic.hspeed = 0;
     o_ship_aesthetic.x = 192;
     view_xview[1] = 0;
     view_yview[1] = 32;
+    audio_sound_gain(global.waves, global.waves_gain, 500);
 } else if step == 280 {
     o_stickman.vspd = -0.5;
     o_stickman.hspd = -0.1;
@@ -148,6 +153,7 @@ if step &gt; 390 {
     view_wview[1] = 2.5*view_hview[1];
     if view_yview[1] &gt; 0 {view_yview[1]--}
     
+    if step == 430 audio_play_sound(sfx_title_in, 1, false);
     if step &gt; 430 {
         size_step = step - 430;
         if size_step &lt; 60 {

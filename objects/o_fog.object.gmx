@@ -25,7 +25,7 @@
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>fog_colour = make_colour_rgb(0, 249, 249);
+            <string>fog_colour = make_colour_rgb(0, 200, 249);
 </string>
           </argument>
         </arguments>

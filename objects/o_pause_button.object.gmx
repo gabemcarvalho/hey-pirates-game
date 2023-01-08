@@ -54,6 +54,8 @@ image_speed = 0;
 // Check if the mouse is on the button
 if mouse_x &gt; x &amp;&amp; mouse_x &lt; x+8 {
     if mouse_y &gt; y &amp;&amp; mouse_y &lt; y+8 {
+        if image_index == 0 audio_play_sound(sfx_menu1, 1, false);
+        
         // Mouse is on button
         image_index = 1;
         

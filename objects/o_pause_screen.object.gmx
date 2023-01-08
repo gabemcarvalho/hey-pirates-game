@@ -65,10 +65,17 @@ countdown_text = "3";
 countdown_place--;
 
 switch countdown_place {
-    case 2: countdown_text = "2" break;
-    case 1: countdown_text = "1" break;
+    case 2:
+        countdown_text = "2";
+        audio_play_sound(sfx_menu2, 1, false);
+        break;
+    case 1:
+        countdown_text = "1";
+        audio_play_sound(sfx_menu2, 1, false);
+        break;
     case 0:
         countdown_text = "GO!";
+        audio_play_sound(sfx_menu3, 1, false);
         o_pause_sprite.unfade = true;
     
     break;
@@ -109,7 +116,9 @@ if !clicked {
             alarm[0] = countdown_timer_default;
             option = 1;
             clicked = true;
+            audio_play_sound(sfx_menu2, 1, false);
         }
+        if col_play == c_white audio_play_sound(sfx_menu1, 1, false);
         col_play = make_colour_rgb(200,200,200);
     } else col_play = c_white;
     
@@ -120,7 +129,9 @@ if !clicked {
             clicked = true;
             o_pause_sprite.fade_to_black = true;
             text_target_alpha = 0;
+            audio_play_sound(sfx_menu3, 1, false);
         }
+        if col_menu == c_white audio_play_sound(sfx_menu1, 1, false);
         col_menu = make_colour_rgb(200,200,200);
     } else col_menu = c_white;
     
@@ -129,6 +140,7 @@ if !clicked {
             // Quit
             game_end();
         }
+        if col_quit == c_white audio_play_sound(sfx_menu1, 1, false);
         col_quit = make_colour_rgb(200,200,200);
     } else col_quit = c_white;
     

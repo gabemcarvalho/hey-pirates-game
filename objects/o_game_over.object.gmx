@@ -36,6 +36,9 @@ button_alpha = 0;
 button_spd = 1/(1.2*room_speed);
 end_transition = false;
 end_alpha = 0;
+
+audio_sound_gain(global.waves, 0.0, 1500);
+audio_play_sound(sfx_rumbling, 1, false);
 </string>
           </argument>
         </arguments>
@@ -119,6 +122,7 @@ if end_transition {
             <string>/// Return to the title screen
 if button_alpha == 1 {
     end_transition = true;
+    audio_play_sound(sfx_menu4, 1, false);
 }
 </string>
           </argument>

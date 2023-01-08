@@ -29,6 +29,7 @@
 angle = 0;
 step2 = 0;
 size = 1;
+audio_play_sound(sfx_title_hit, 1, false);
 </string>
           </argument>
         </arguments>
