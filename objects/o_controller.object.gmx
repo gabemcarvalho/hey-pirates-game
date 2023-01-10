@@ -81,6 +81,8 @@ global.speed_mulitplier = 1.0;
 global.waves = audio_play_sound(sfx_waves, 1, true);
 global.waves_gain = 0.2;
 audio_sound_gain(global.waves, 0, 0);
+
+global.music = undefined;
 </string>
           </argument>
         </arguments>

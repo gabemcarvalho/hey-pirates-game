@@ -10,4 +10,8 @@ with o_controller {
     
     instance_activate_all();
     
+    if (global.music != undefined) {
+        audio_resume_sound(global.music);
+        audio_sound_gain(global.music, 1, 500);
+    }
 }

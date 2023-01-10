@@ -39,6 +39,7 @@ end_alpha = 0;
 
 audio_sound_gain(global.waves, 0.0, 1500);
 audio_play_sound(sfx_rumbling, 1, false);
+audio_sound_gain(global.music, 0.0, 1500); 
 </string>
           </argument>
         </arguments>
@@ -123,6 +124,8 @@ if end_transition {
 if button_alpha == 1 {
     end_transition = true;
     audio_play_sound(sfx_menu4, 1, false);
+    audio_stop_sound(global.music);
+    global.music = undefined;
 }
 </string>
           </argument>

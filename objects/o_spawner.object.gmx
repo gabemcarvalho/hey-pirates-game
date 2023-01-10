@@ -30,6 +30,8 @@ instance_create(0,0,o_score);
 first_enemy = instance_create(276,80,o_ship);
 timer_set = false;
 num_spawned_total = 0;
+
+global.music = audio_play_sound(m_battle_start, 1, false);
 </string>
           </argument>
         </arguments>
@@ -111,6 +113,8 @@ if !timer_set {
     if !instance_exists(first_enemy) {
         timer_set = true;
         alarm[0] = 2*room_speed;
+        
+        audio_stop_sound(global.music);
     }
 }
 </string>

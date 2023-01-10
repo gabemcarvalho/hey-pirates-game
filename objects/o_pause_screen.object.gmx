@@ -130,6 +130,8 @@ if !clicked {
             o_pause_sprite.fade_to_black = true;
             text_target_alpha = 0;
             audio_play_sound(sfx_menu3, 1, false);
+            audio_stop_sound(global.music);
+            global.music = undefined;
         }
         if col_menu == c_white audio_play_sound(sfx_menu1, 1, false);
         col_menu = make_colour_rgb(200,200,200);
