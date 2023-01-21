@@ -14,7 +14,9 @@
 global.xp = 0;
 global.level = 1;
 global.bounty = 0;
-global.num_coins_active = 0;</code>
+global.num_coins_active = 0;
+global.speed_mulitplier = 1.0;
+global.num_enemies = 0;</code>
   <enableViews>-1</enableViews>
   <clearViewBackground>-1</clearViewBackground>
   <clearDisplayBuffer>-1</clearDisplayBuffer>
@@ -66,6 +68,7 @@ global.num_coins_active = 0;</code>
     <instance objName="o_pgun" x="4" y="48" name="inst_E973C41A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_ground" x="-16" y="64" name="inst_DADFDB77" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
     <instance objName="o_fog" x="32" y="0" name="inst_C222134A" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
+    <instance objName="o_audio_button" x="1" y="1" name="inst_290CF1B2" locked="0" code="" scaleX="1" scaleY="1" colour="4294967295" rotation="0"/>
   </instances>
   <tiles>
     <tile bgName="tl_hills" x="-32" y="40" w="96" h="32" xo="0" yo="0" id="10000101" name="inst_C21993C5" depth="1000004" locked="0" colour="4294967295" scaleX="1" scaleY="1"/>

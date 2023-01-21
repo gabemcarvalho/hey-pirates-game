@@ -36,6 +36,7 @@ recoil_amount = 0;
 recoil_speed = 0;
 rx = 0;
 ry = 0;
+recoil_recovery = 0.2;
 
 potato_spd = 3.0;  // Default 2.0, max 3.0
 recoil_amt = 1.2 // Default 1.2, Max 0.5
@@ -236,8 +237,8 @@ if recoil_speed &gt; 0 {
     ry -= recoil_speed*angle_y; // y-dir recoil turned off
     recoil_speed -= 0.5;
 }
-if rx != 0 {rx = approach(rx,0.2,0)};
-if ry != 0 {ry = approach(ry,0.2,0)};
+if rx != 0 {rx = approach(rx,recoil_recovery + 0.5 * (global.level - 1),0)};
+if ry != 0 {ry = approach(ry,recoil_recovery + 0.5 * (global.level - 1),0)};
 </string>
           </argument>
         </arguments>

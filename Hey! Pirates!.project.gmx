@@ -33,6 +33,8 @@
     <sound>sound\sfx_title_hit</sound>
     <sound>sound\sfx_title_in</sound>
     <sound>sound\m_battle_start</sound>
+    <sound>sound\m_pirate_battle</sound>
+    <sound>sound\m_pirate_battle_fade_in</sound>
   </sounds>
   <sprites name="sprites">
     <sprites name="Characters">
@@ -92,6 +94,7 @@
         <sprite>sprites\s_xp_bar</sprite>
         <sprite>sprites\s_xp_bar_fill</sprite>
         <sprite>sprites\s_pause_button</sprite>
+        <sprite>sprites\s_audio_button</sprite>
         <sprite>sprites\s_shop_button</sprite>
       </sprites>
       <sprites name="Fonts">
@@ -110,6 +113,7 @@
       </sprites>
     </sprites>
     <sprites name="Other/Unused">
+      <sprite>sprites\favicon</sprite>
       <sprite>sprites\THESPAWNRATEISWAYTOOHIGH</sprite>
       <sprite>sprites\shop_concept</sprite>
       <sprite>sprites\s_xp_gui_variations</sprite>
@@ -146,6 +150,7 @@
       <objects name="Title Screen">
         <object>objects\o_title</object>
         <object>objects\o_options</object>
+        <object>objects\o_audio_button</object>
         <object>objects\o_play_button</object>
       </objects>
       <objects name="Transitions">

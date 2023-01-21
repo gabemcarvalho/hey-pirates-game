@@ -32,6 +32,7 @@ hp = hp_max;
 hspeed = -0.15 * global.speed_mulitplier;
 y = water.level+83;
 angle = water.cycle*3;
+global.num_enemies += 1;
 
 // Create 2 pirates on the raft
 p1_x = round(random(8));
@@ -101,6 +102,7 @@ if hp == 0 {
     ship2 = instance_create(x,y,o_raft_sinking);
     ship2.angle = angle;
     add_screenshake(1.5,10);
+    global.num_enemies -= 1;
     
     sword1 = instance_create(x+p1_rx-0.8,water.level+83,o_barrel_pirate_sword);
     sword1.depth = depth-0.2;

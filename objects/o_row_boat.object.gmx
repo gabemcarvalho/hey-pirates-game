@@ -32,6 +32,7 @@ hp = hp_max;
 hspeed = -0.18 * global.speed_mulitplier;
 y = water.level+83;
 angle = water.cycle*3;
+global.num_enemies += 1;
 
 // Create 2 pirates on the ship
 pirate1 = instance_create(x,water.level+83,o_pirate);
@@ -91,6 +92,7 @@ if hp == 0 {
     ship2 = instance_create(x,y,o_row_boat_sinking);
     ship2.angle = angle;
     add_screenshake(1.5,10);
+    global.num_enemies -= 1;
     
     // Add to score
     score += 250;

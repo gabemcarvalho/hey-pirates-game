@@ -117,6 +117,9 @@ if float {
     } else {
         y = water.level+83;
     }
+} else if (x &gt;= room_width) {
+    x = room_width;
+    hspeed = -abs(hspeed);
 }
 </string>
           </argument>

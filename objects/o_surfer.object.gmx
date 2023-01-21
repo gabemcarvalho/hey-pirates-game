@@ -30,6 +30,7 @@ hp_max = 16;
 hp = hp_max;
 y = water.level+83
 angle = 0;
+global.num_enemies += 1;
 
 hspeed = -0.22 * global.speed_mulitplier;
 
@@ -69,6 +70,7 @@ if hp == 0 {
     barrel2.angle = angle;
     barrel2.top = top;
     add_screenshake(1.5,10);
+    global.num_enemies -= 1;
     
     // Add to score
     score += 100;
