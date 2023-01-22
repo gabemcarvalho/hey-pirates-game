@@ -140,7 +140,9 @@ if !clicked {
     if mouse_in((room_width*0.75)-15,(room_height*0.65)-5,(room_width*0.75)+15,(room_height*0.65)+5) {
         if mouse_check_button_pressed(mb_left) {
             // Quit
-            game_end();
+            if os_browser == browser_not_a_browser {
+                game_end();
+            }
         }
         if col_quit == c_white audio_play_sound(sfx_menu1, 1, false);
         col_quit = make_colour_rgb(200,200,200);
