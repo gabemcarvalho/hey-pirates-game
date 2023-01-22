@@ -13,4 +13,6 @@ A game where you defend the coast from pirates with a potato gun. Made with Game
 * Inspired by a grade 12 physics question.
 
 ## Preview
-![preview image](./SCREENSHOT.png)
+![preview image](./webpage/screenshot-title.png)
+![preview image](./webpage/screenshot-game-1.png)
+![preview image](./webpage/screenshot-game-2.png)
