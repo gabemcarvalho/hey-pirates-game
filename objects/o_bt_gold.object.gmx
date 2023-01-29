@@ -140,7 +140,8 @@ if float {
         <arguments>
           <argument>
             <kind>1</kind>
-            <string>global.bounty += 5;
+            <string>score += 5;
+global.bounty += 5;
 create_text(x,y-2,"+5",make_colour_hsv(34,223,160+round(random(80))),room_speed/2,0.05,0.1,0.6,0);
 audio_play_sound(choose(sfx_coin1, sfx_coin2, sfx_coin3), 1, false);
 instance_destroy();
